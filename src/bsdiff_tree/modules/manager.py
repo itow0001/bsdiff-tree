@@ -1,6 +1,5 @@
 '''
 Created on Aug 5, 2016
-
 @author: iitow
 '''
 import os
@@ -9,11 +8,12 @@ from random import randint
 
 class Manager(object):
     '''
-    classdocs
+    handles all actions for bstree
     '''
     def __init__(self,options):
         '''
         Constructor
+        :param options: Dict, argparse menu options
         '''
         self.options = options
         self.path = "%s/%s" % (self.options.path,"tmp")
