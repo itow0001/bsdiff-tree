@@ -218,6 +218,9 @@ def rsync(server,
     return session
 
 def sig_exception(e,num):
+    '''
+    Listen for key exit
+    '''
     raise Exception("%s %s" % (e,str(num)))
 
 def shell(cmd,

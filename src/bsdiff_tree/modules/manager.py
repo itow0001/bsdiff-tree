@@ -90,9 +90,9 @@ class Manager(object):
 
     def bsdiff(self):
         '''
-        1. Generate bsdiff origin file of self
-        2. Generate bsdiff origin file to new file
-        3. diff compare origin to new
+        Generate bsdiff origin file of self
+        Generate bsdiff origin file to new file
+        diff compare origin to new
         '''
         diffs = []
         for file_path in self.union:
