@@ -59,6 +59,8 @@ class Manager(object):
                 if excludes:
                     if not self._is_exclude(filepath):
                         paths.append(filepath)
+                    else:
+                        self.excluded.append(filepath)
                 else:
                     paths.append(filepath)
         return paths
