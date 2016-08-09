@@ -18,7 +18,7 @@ def readme():
 setup(
     name='bstree',
     version='1.0.1',
-    description="bsdiff on a directory trees",
+    description="find binaries which differ between directory trees of similar layout. Systems [Freebsd, Linux, OSX]",
     long_description=readme(),
     author='Ian Itow',
     author_email='itow0001@gmail.com',
