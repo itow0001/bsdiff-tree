@@ -26,6 +26,7 @@ def menu():
                         dest="path",
                         help='absolute path to place output')
     parser.add_argument('-e',
+                        action='append',
                         dest="excludes",
                         default=[],
                         help='exclude files or directories')

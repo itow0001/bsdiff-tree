@@ -37,15 +37,21 @@ class Manager(object):
         :param excludes: List, list of excludes
         '''
         paths = []
+        if self.options.debug:
+            print excludes
         for root, directories, filenames in os.walk(path):
             for filename in filenames:
-                for exclude in excludes:
-                    root = root.replace(path,'')
-                    filepath =  "%s/%s" % (root, filename)
-                    if not exclude in filepath:
-                        paths.append(filepath)
-                    else:
-                        self.excluded.append(filepath)
+                if excludes:
+                    for exclude in excludes:
+                        root = root.replace(path,'')
+                        filepath =  "%s/%s" % (root, filename)
+                        if exclude in filepath:
+                            self.excluded.append(filepath)
+                        else:
+                            paths.append(filepath)
+                else:
+                    paths.append(filepath)
+                    
         return paths
 
     def _set_arrays(self):
