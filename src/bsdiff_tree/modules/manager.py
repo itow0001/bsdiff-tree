@@ -41,10 +41,10 @@ class Manager(object):
             print excludes
         for root, directories, filenames in os.walk(path):
             for filename in filenames:
+                root = root.replace(path,'')
+                filepath =  "%s/%s" % (root, filename)
                 if excludes:
                     for exclude in excludes:
-                        root = root.replace(path,'')
-                        filepath =  "%s/%s" % (root, filename)
                         if exclude in filepath:
                             self.excluded.append(filepath)
                         else:
