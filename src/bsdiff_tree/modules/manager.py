@@ -180,11 +180,12 @@ class Manager(object):
             for path in self.errors:
                 bs_diff.write("error,%s\n"% path)
                 cnt_errors+=1
-        print " bsdiffs: %s" % (str(cnt_diffs))
-        print "   delta: %s" % (str(cnt_delta))
         print "  slinks: %s" % (str(cnt_slinks))
         print "excluded: %s" % (str(cnt_excluded))
         print "  errors: %s" % (str(cnt_errors))
+        print "#############"
+        print " bsdiffs: %s" % (str(cnt_diffs))
+        print "   delta: %s" % (str(cnt_delta))
         print "   TOTAL: %s" % (str(cnt_diffs+cnt_delta))
         print " results: %s" % (filename)
         print "Complete"
