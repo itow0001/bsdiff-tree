@@ -30,6 +30,11 @@ def menu():
                         dest="excludes",
                         default=[],
                         help='exclude files or directories')
+    parser.add_argument('-E',
+                        action='store',
+                        dest="excludes_file",
+                        default=[],
+                        help='All excludes from a file')
     parser.add_argument('-d',
                         action="store_true",
                         dest="debug",

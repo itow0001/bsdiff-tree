@@ -260,7 +260,7 @@ def shell(cmd,
                     sys.stdout.write(out)
                 # when kill is called exit
                 for s in [signal.SIGHUP, signal.SIGTERM, signal.SIGINT]:
-                    signal.signal(s, lambda n, _: sig_exception("[exit] plugins/modules/terminal Received signal", n))
+                    signal.signal(s, lambda n, _: sig_exception("[exit] terminal Received signal", n))
                 time.sleep(.01)
                 
             out = reader.read()
